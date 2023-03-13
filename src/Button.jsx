@@ -1,7 +1,11 @@
 
-const Button = (props) => { 
+const Button = (props) => {
+    const { text, onClick } = props;
+    
     return(
-        <button> {props.text} </button>
+        <button onClick={onClick}>
+            {text}
+        </button>
     )
 };
 
