@@ -1,7 +1,8 @@
 import './App.css';
 import React, { useState } from 'react';
-import Button from './Button';
-import Title from './Title';
+import Button from './components/Button';
+import Card from './components/Card';
+import Title from './components/Title';
 
 const App = () => {
   const [count, setCount] = useState(0); 
@@ -16,6 +17,7 @@ const App = () => {
 
       <Button onClick={increaseCount} text="Increase" />
       <Button onClick={decreaseCount} text="Decrease" />
+      <Card />
       
     </div>
   );

@@ -1,0 +1,16 @@
+* {
+    margin: 10px;
+}
+
+.card {
+    padding: 10px;
+    border: 1px black solid;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 50%;
+    height: auto;
+}
+
+.comment-header {
+    font-weight: bold;
+}
