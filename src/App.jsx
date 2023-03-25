@@ -3,6 +3,7 @@ import React, { useState, createContext } from 'react';
 import Layout from './components/Layout';
 
 export const countContext = createContext(null);
+countContext.displayName = "countContext";
 
 const App = () => {
 
