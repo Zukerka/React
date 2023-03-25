@@ -1,25 +1,23 @@
 import './App.css';
-import React, { useState } from 'react';
-import Button from './components/Button';
-import Card from './components/Card';
-import Title from './components/Title';
+import React, { useState, createContext } from 'react';
+import Layout from './components/Layout';
+
+export const countContext = createContext(null);
 
 const App = () => {
-  const [count, setCount] = useState(0); 
-  
-  const increaseCount = () => {setCount(count + 1) };
-  const decreaseCount = () => { setCount(count - 1) };
-  
+
+  const [count, setCount] = useState(0);
+
+  const value = {
+    count,
+    setCount
+  }
   return (
-    <div>
-
-      <Title name = {count} />
-
-      <Button onClick={increaseCount} text="Increase" />
-      <Button onClick={decreaseCount} text="Decrease" />
-      <Card />
-      
-    </div>
+    <countContext.Provider value={value}>
+      <div className='app'> App
+        <Layout />
+      </div>
+    </countContext.Provider>
   );
 }
 
